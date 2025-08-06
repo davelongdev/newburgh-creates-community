@@ -17,3 +17,12 @@ h1 {
 img {
   max-width: 300px;
 }
+
+#terminal-container {
+  display: flex;
+  justify-content: center;
+}
+
+#terminal-container-inner {
+  max-width: 600px;
+}
