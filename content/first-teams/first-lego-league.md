@@ -9,6 +9,14 @@ draft = false
 
 <br>
 
-first lego league content
+we currently have two first lego league teams made up of 6 kids each:
 
 <br>
+
+- unlicensed LIFT
+
+- circuit breakerz
+
+<br>
+
+learn more about FLL here - - - [firstlegoleague.org](https://www.firstlegoleague.org/)
