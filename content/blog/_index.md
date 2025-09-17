@@ -1,8 +1,14 @@
 +++
-title = 'blog list title'
+title = 'newburgh creates community blog'
 date = 2025
-description = 'blog list page description'
+description = 'newburgh creates community blog | articles about our STEAM programs and community'
 draft = false
 +++
 
-sample blog list page / main page content
+<br>
+
+welcome to the newburgh creates blog.  it's a work in progress.  we plan to write some more blog posts soon.
+
+thanks for visiting.
+
+<br>
