@@ -13,7 +13,9 @@ draft = false
 
 we currently have one first tech challenge team at newburgh creates made up of 4 students.
 
-the name of the team is Code Crushers.
+the name of the team is:
+
+- Code Crushers
 
 <br>
 
@@ -22,6 +24,22 @@ the name of the team is Code Crushers.
 <br>
 
 ## information and resources
+
+<br>
+
+### official first stuff
+
+- main website for ftc
+
+  - https://www.firstinspires.org/robotics/ftc
+
+- game and season info
+
+  - https://www.firstinspires.org/robotics/ftc/game-and-season
+
+- the rulebook
+
+  - https://ftc-resources.firstinspires.org/ftc/game/manual
 
 <br>
 
