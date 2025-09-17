@@ -1,5 +1,5 @@
 +++ 
-title = 'python guessing game - by jaya'
+title = "jaya's python guessing game"
 date = 2025
 description = 'a project that jaya made with python'
 tags = ['coding', 'python', 'STEM']
@@ -7,8 +7,20 @@ categories = ['python', 'coding']
 draft = false
 +++
 
-<br>
+<script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+<script type="module">
+    const loading = document.getElementById('loading');
+    addEventListener('py:ready', () => loading.close());
+    loading.showModal();
+</script>
+<script src="/python/mini-coi.js" scope="./"></script>
 
-jaya's project content
+<h3>Jaya's Guessing Game</h3>
+
+<div id="terminal-container">
+  <div id="terminal-container-inner">
+    <script type="py" src="/python/main.py" config="/python/pyscript.toml" terminal worker></script>
+  </div>
+</div>
 
 <br>
