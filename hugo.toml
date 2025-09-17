@@ -1,5 +1,5 @@
 # the site's base url
-baseURL = 'https://www.newburghcreatescommunity.com'
+baseURL = 'https://newburghcreatescommunity.com'
 
 # the site's language code
 languageCode = 'en-us'
