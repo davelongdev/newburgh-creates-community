@@ -1,0 +1,31 @@
+
+<head>
+	<meta charset="UTF-8">
+	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+	<meta
+		name="description" 
+		content="{{ if .IsHome }}{{ $.Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}">
+	<link href="/css/styles.css" rel="stylesheet">
+
+	<!-- Icons -->
+	<link rel="shortcut icon" type= "image/svg" href="{{ "/favicon.svg" }}">
+
+	<!-- Internet Explorer Backwards Compatability -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- OpenGraph Tags -->
+	<meta property="og:title" content="sample title" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://samplesite.com" />
+	<meta property="og:locale" content="en" />
+	<meta
+		property="og:description"
+		content="sample og description"
+	/>
+	<meta property="og:site_name" content="sample site name" />
+	<meta property="og:image" content="https://sample image url" />
+	<meta property="og:image:alt" content="sample alt text" />
+</head>

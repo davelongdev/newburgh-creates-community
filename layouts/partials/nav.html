@@ -1,0 +1,31 @@
+<nav class='container-nav'>
+  <div class='container-nav-top'>
+    <div class='container-nav-title'>
+      <a href="{{ .Site.BaseURL }}" class="title-nav">
+        	<img
+            src="/images/logo.png" 
+            alt="newburgh creates logo"
+            class="headshot"
+            width="100"
+            height="100"
+          />
+      </a>
+    </div>
+    <div class='container-nav-list'>
+      <ul class='list-nav'>
+        {{ range.Site.Menus.main }}
+        <li class="list-items">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <div class='container-nav-theme-switch'>
+    <label id="theme-toggle" aria-label="Toggle Dark Mode Color Theme">
+      <span class="toggle-text">Light</span>
+      <input type="checkbox">
+      <span class="toggle-text">Dark</span>
+    </label>
+  </div>
+</nav>

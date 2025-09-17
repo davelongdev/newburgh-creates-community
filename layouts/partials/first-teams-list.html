@@ -1,0 +1,47 @@
+<main>
+
+<h1 class="txt-center">{{ .Title }}</h1>
+
+{{ .Content }}
+
+<hr style='margin-top: 1.5rem;'>
+
+<h2 class="txt-center">first teams</h2>
+
+{{ $pages := where site.RegularPages "Type" "first-teams" }}
+{{ $paginator := .Paginate $pages.ByTitle 3 }}
+
+{{ range $paginator.Pages }}
+
+<div class='parent'>
+  <article class="blog-post-card child">
+
+    <h3 class="margin-bottom-sm margin-top-none">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
+
+    {{ partial "taxonomy-block.html" . }}
+
+  </article>
+</div>
+
+{{ end }}
+
+{{ partial "paginate.html" . (dict "page" . "format" "default") }}
+
+<hr style="margin-top: 1.5rem;">
+
+<article class='taxonomy-links'>
+  <h2 class="txt-center">Tags and Categories</h2>
+  <p>Click on the links below to browse blog posts by category or tag.</p>
+  <ul>
+    <li>
+      <a href="{{ $.Page.Site.Params.baseurl }}/tags">Tags</a>
+    </li>	
+    <li>
+      <a href="{{ $.Page.Site.Params.baseurl }}/categories">Categories</a>
+    </li>	
+  </ul>
+</article>
+
+</main>
