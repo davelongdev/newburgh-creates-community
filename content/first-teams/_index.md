@@ -1,5 +1,5 @@
 +++
-title = 'first teams'
+title = 'first teams at newburgh creates'
 date = 2025
 description = 'first teams at newburgh creates | first lego league & first tech challenge'
 draft = false

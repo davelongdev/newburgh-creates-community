@@ -6,9 +6,9 @@
 
 <hr style='margin-top: 1.5rem;'>
 
-<h2 class="txt-center">Blog Posts</h2>
+<h2 class="txt-center">Projects</h2>
 
-{{ $pages := where site.RegularPages "Type" "blog" }}
+{{ $pages := where site.RegularPages "Type" "projects" }}
 {{ $paginator := .Paginate $pages.ByTitle 3 }}
 
 {{ range $paginator.Pages }}
