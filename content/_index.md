@@ -22,3 +22,5 @@ here you will find:
 - resources for our community
 
 <br>
+
+to visit the main newburgh creates site, click here - [NEWBURGH CREATES](https://newburghcreates.com)

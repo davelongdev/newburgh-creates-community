@@ -24,3 +24,9 @@ draft = false
 <br>
 <br>
 
+<p class='txt-center'>to visit the main newburgh creates site, click here - 
+  <a href='https://newburghcreates.com'>NEWBURGH CREATES</a>
+</p>
+
+<br>
+
