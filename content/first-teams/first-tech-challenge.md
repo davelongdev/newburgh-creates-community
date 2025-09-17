@@ -1,15 +1,15 @@
 +++ 
 title = 'first tech challenge team'
-date = 2025
+date = 2025-09-17T14:09:23-04:00
 description = 'information for the newburgh creates first tech challenge team'
-tags = ['tag-1', 'tag-2']
-categories = ['category-1', 'category-2']
+tags = ['FTC', 'first', 'robotics', 'STEAM']
+categories = ['FTC']
 draft = false
 +++
 
 <br>
 
-## about our FLL team:
+## about our FLL team
 
 we currently have one first tech challenge team at newburgh creates made up of 4 students.
 
@@ -85,3 +85,36 @@ what is CAD?  Computer Assisted Design.
 - **Autocad Fusion** - Fusion is another popular CAD program that is made by autodesk.  FTC students may want to try fusion out.
 
 <br>
+
+### programming resources
+
+- FTC Programming Stuff
+
+  - https://ftc-docs.firstinspires.org/en/latest/programming_resources/index.html 
+
+- Android Studio Setup
+
+  - https://www.youtube.com/watch?v=_ZIYtNadJBo
+
+<br>
+
+### XRP - experiential robotics platform
+
+- assembly and coding setup video
+
+  - https://www.youtube.com/watch?v=JQyKhzlMSms 
+
+- coding platform
+
+  - https://xrpcode.wpi.edu/
+
+<br>
+
+### misc. resources
+
+- coach pratt's youtube channel
+
+  - https://www.youtube.com/@BroganMPratt 
+
+<br>
+

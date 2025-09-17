@@ -1,6 +1,6 @@
 +++ 
 title = "jaya's python guessing game"
-date = 2025
+date = 2025-09-17T14:09:23-04:00
 description = 'a project that jaya made with python'
 tags = ['coding', 'python', 'STEM']
 categories = ['python', 'coding']
