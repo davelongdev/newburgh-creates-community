@@ -19,4 +19,9 @@ we currently have two first lego league teams made up of 6 kids each:
 
 <br>
 
+a video explainging using color sensors with blocks in pybricks
+- https://www.youtube.com/watch?v=kwnSbnlhOkA&t=425s
+
+<br>
+
 learn more about FLL here - - - [firstlegoleague.org](https://www.firstlegoleague.org/)
