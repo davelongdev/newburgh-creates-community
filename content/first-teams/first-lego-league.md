@@ -19,7 +19,7 @@ we currently have two first lego league teams made up of 6 kids each:
 
 <br>
 
-a video about using color sensors with blocks in pybricks
+a video about using color sensors with block coding in pybricks
 - https://www.youtube.com/watch?v=kwnSbnlhOkA&t=425s
 
 <br>
