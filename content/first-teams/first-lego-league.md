@@ -47,7 +47,7 @@ our teams are awesome.
 
 <br>
 
--  color sensors tutorial
+-  color sensor tutorial
 
     - https://www.youtube.com/watch?v=kwnSbnlhOkA&t=425s
 
