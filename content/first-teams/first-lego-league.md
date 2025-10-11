@@ -47,7 +47,7 @@ our teams are awesome.
 
 <br>
 
--  a video about using color sensors in pybricks
+-  color sensors tutorial
 
     - https://www.youtube.com/watch?v=kwnSbnlhOkA&t=425s
 
