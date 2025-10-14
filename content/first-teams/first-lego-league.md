@@ -31,6 +31,12 @@ our teams are awesome.
 
 <br>
 
+- pybricks tutorial
+
+    - https://www.youtube.com/watch?v=qh9Ae0hwYH8&list=PLqKtlQvmhEzocKOsPASmSdew_n-xO7G2b 
+
+<br>
+
 - setting up the drive base in pybricks
 
     - general info
@@ -47,9 +53,15 @@ our teams are awesome.
 
 <br>
 
--  color sensor tutorial
+- color sensor tutorial
 
     - https://www.youtube.com/watch?v=kwnSbnlhOkA&t=425s
+
+<br>
+
+- 4 wheel drive tutorial
+
+    - https://www.youtube.com/watch?v=DLza8SC9P7s&t=314s
 
 <br>
 
