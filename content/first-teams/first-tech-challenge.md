@@ -70,6 +70,16 @@ the name of the team is:
 
 <br>
 
+### rev info
+
+- **starter kit**
+
+    - https://www.revrobotics.com/rev-45-3529/
+
+- **starter bot**
+
+    - https://www.revrobotics.com/duo/ftc-starter-bot/
+
 ### CAD programs
 
 what is CAD?  Computer Assisted Design.
