@@ -27,9 +27,9 @@ our teams are awesome.
 
 <br>
 
-## google drive team storage
+## google drive storage
 
-- https://drive.google.com/drive/u/0/folders/1x9E5gvEi6Tk-K8LRunq9aqiFfXsdykBS
+- https://drive.google.com/drive/u/3/home
 
 <br>
 
