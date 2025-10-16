@@ -29,7 +29,7 @@ our teams are awesome.
 
 ## google drive team storage
 
-- https://drive.google.com/drive/folders/0APnqC1PEbUvYUk9PVA 
+- https://drive.google.com/drive/u/0/folders/1x9E5gvEi6Tk-K8LRunq9aqiFfXsdykBS
 
 <br>
 
