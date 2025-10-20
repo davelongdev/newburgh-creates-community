@@ -19,7 +19,7 @@ we currently have two first lego league teams made up of 6 kids each:
 
 - unlicensed LIFT
 
-- circuit breakerz
+- vector victorious
 
 <br>
 
@@ -73,7 +73,7 @@ our teams are awesome.
 
 - hub menu for multiple programs
 
-https://pybricks.com/project/spike-hub-menu/
+    - https://pybricks.com/project/spike-hub-menu/
 
 <br>
 
