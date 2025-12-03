@@ -106,6 +106,10 @@ what is CAD?  Computer Assisted Design.
 
   - https://www.youtube.com/watch?v=_ZIYtNadJBo
 
+- Timers in FTC Blocks
+
+  - https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Timers-in-FTC-Blocks 
+
 <br>
 
 ### XRP - experiential robotics platform
