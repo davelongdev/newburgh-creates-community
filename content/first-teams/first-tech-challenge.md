@@ -43,6 +43,16 @@ the name of the team is:
 
 <br>
 
+### scoring, ranking, and advancement - 2025-26 season
+
+- scoring
+  - https://www.youtube.com/watch?v=pJRKzz87k8E
+- penalties
+  - https://www.youtube.com/watch?v=DPQVfvg4Ck4
+- ranking / advancement
+  - https://www.youtube.com/watch?v=KOt_kVHVuF8
+
+
 ### organizations that make kits / parts
 
 - **Rev Robotics**
@@ -67,6 +77,10 @@ the name of the team is:
 - **80 / 20**
   - makes T-Slot Aluminum parts
   - https://8020.net
+
+- **Rotacaster / Omnia**
+  - make nice omni wheels
+  - https://www.rotacaster.com.au/
 
 <br>
 
