@@ -79,6 +79,9 @@ the name of the team is:
   - makes T-Slot Aluminum parts
   - https://8020.net
 
+- **swyftrobotics**
+  - https://swyftrobotics.com/
+
 - **Rotacaster / Omnia**
   - make nice omni wheels
   - https://www.rotacaster.com.au/
@@ -110,6 +113,8 @@ what is CAD?  Computer Assisted Design.
 - **Solidworks** - Solidworks is a proprietary CAD program that is very robust.  it is used by many professionals in industry and in universities that teach CAD.  Solidworks provides FTC teams with student licenses to use the software.
 
 - **Autocad Fusion** - Fusion is another popular CAD program that is made by autodesk.  FTC students may want to try fusion out.
+
+- **plasticity** - https://www.plasticity.xyz/
 
 <br>
 
