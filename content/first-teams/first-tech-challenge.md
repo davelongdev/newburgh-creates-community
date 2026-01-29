@@ -9,7 +9,7 @@ draft = false
 
 <br>
 
-## about our FLL team
+## about our FTC team
 
 we currently have one first tech challenge team at newburgh creates made up of 4 students.
 
