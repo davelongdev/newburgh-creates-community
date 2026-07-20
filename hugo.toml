@@ -26,7 +26,7 @@ title = 'newburgh creates community'
     identifier = "projects"
     name = "projects"
     url = "/projects"
-    weight = 80
+    weight = 38
 
   [[menu.main]]
     identifier = "first teams"
