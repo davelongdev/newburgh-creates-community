@@ -7,12 +7,14 @@ draft = false
 
 <br>
 
-overview - buildlab is a program that integrates 3 elements:
+**overview:**  buildlab is a program that integrates 3 elements:
 - art and creativity
-- designing and building real-world projects
+- designing and building real-world projects -- outside of computer screens
 - electronics, technology, and computing
 
-buildlab is a new program.  our vision is that it will include elements such as:
+**narrow focus:**  as a more narrow focus, build lab is a space to build real-world projects with electronics and microcontrollers (e.g. micro:bit, arduino) and microcomputers (e.g. raspberry pi).
+
+**broad focus:**  buildlab is a new program.  it could include elements such as:
 
 - electronics (breadboards, lights, buzzers, etc.) and circuits
 - microcontrollers and microcomputers

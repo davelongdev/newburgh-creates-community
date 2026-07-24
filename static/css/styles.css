@@ -252,8 +252,10 @@ video {
 .list-nav {
   display: flex;
   flex-direction: row;
-  margin: auto;
+  flex-wrap: wrap;     
+  justify-content: center;
   text-align: center;
+  list-style: none;
 }
 
 .list-items {
@@ -583,4 +585,9 @@ button:focus-visible,
     text-align: right;
   }
 
+}
+
+@media screen and (max-width: 775px) {
+  body { padding: 25px 20px;
+  overflow-wrap: break-word}
 }
