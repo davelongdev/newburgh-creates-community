@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Content Manager</title>
+  </head>
+  <body>
+    <!--
+      Sveltia CMS admin UI, served at /admin/.
+
+      This lives under static/ because Hugo copies that directory verbatim.
+      config.yml contains {{slug}} placeholders that would otherwise be parsed
+      as Go template actions and break the build.
+
+      To switch to Decap CMS, replace the script tag below with:
+        <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+      config.yml is compatible between the two.
+    -->
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  </body>
+</html>

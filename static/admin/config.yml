@@ -1,0 +1,204 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+# Sveltia CMS configuration.
+#
+# Ported from ../hugo_w_cms/static/admin/config.yml — read that repo's
+# CLAUDE.md "CMS (Sveltia)" section for the auth setup and the reasons this
+# file lives under static/. Deliberate differences from the reference:
+#
+#   - tags/categories are `list` (free text) widgets, not `relation`: the
+#     terms actually used in content here have no content-backed term pages,
+#     so a relation picker would offer nothing (or only the tag-1/tag-2
+#     scaffolding). Swap to relation widgets if/when real term pages exist.
+#   - every body widget is pinned to raw editing (modes: ["raw"]): 11 of the
+#     18 content files embed raw HTML (<br>, <div>, inline <script>/<style>),
+#     and a rich-text editor can normalise or mangle that on save. Check the
+#     first save of any HTML-heavy file with `git diff`.
+#   - taxonomy_pages includes date and draft (the reference omits them and
+#     silently drops both fields on save).
+#
+# NOTE: the {{slug}} placeholders below are CMS template syntax, not Hugo's.
+# This file must stay under static/ so Hugo copies it without parsing it.
+
+backend:
+  name: github
+  repo: davelongdev/newburgh-creates-community
+  branch: main
+  # OAuth client — the existing sveltia-cms-auth worker shared with
+  # hugo_w_cms; its ALLOWED_DOMAINS already covers both Newburgh hostnames.
+  # Do not deploy a second worker or register a second OAuth app.
+  base_url: https://sveltia-cms-auth.davelongdev.workers.dev
+
+media_folder: "static/images" # where uploads are written on disk
+public_folder: "/images" # how Hugo refers to them in markup
+
+collections:
+  - name: blog
+    label: "Blog posts"
+    label_singular: "Blog post"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}" # title "My Post" -> content/blog/my-post.md
+    extension: md
+    format: toml-frontmatter
+    # These same seven fields are repeated literally in projects and
+    # first_teams below — deliberately not shared via a YAML anchor across
+    # collections; collections referencing an alias defined in another
+    # collection showed up empty in Sveltia.
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: Date,
+          name: date,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: Description, name: description, widget: text }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Categories, name: categories, widget: list, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown, modes: ["raw"] }
+
+  - name: projects
+    label: "Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: toml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: Date,
+          name: date,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: Description, name: description, widget: text }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Categories, name: categories, widget: list, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown, modes: ["raw"] }
+
+  - name: first_teams
+    label: "FIRST teams"
+    label_singular: "FIRST team page"
+    folder: "content/first-teams"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: toml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: Date,
+          name: date,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: Description, name: description, widget: text }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Categories, name: categories, widget: list, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown, modes: ["raw"] }
+
+  - name: pages
+    label: "Pages"
+    files:
+      - name: home
+        label: "Homepage"
+        file: "content/_index.md"
+        format: toml-frontmatter
+        fields: &page_fields
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Date,
+              name: date,
+              widget: datetime,
+              date_format: "YYYY-MM-DD",
+              time_format: false,
+            }
+          - { label: Description, name: description, widget: text }
+          - { label: Draft, name: draft, widget: boolean, default: false }
+          - { label: Body, name: body, widget: markdown, modes: ["raw"] }
+
+      - name: about
+        label: "About page"
+        file: "content/about.md"
+        format: toml-frontmatter
+        fields: *page_fields
+
+      - name: contact
+        label: "Contact page"
+        file: "content/contact.md"
+        format: toml-frontmatter
+        fields: *page_fields
+
+      - name: buildlab
+        label: "Buildlab page"
+        file: "content/buildlab.md"
+        format: toml-frontmatter
+        fields: *page_fields
+
+      - name: blog_index
+        label: "Blog section page"
+        file: "content/blog/_index.md"
+        format: toml-frontmatter
+        fields: *page_fields
+
+      - name: projects_index
+        label: "Projects section page"
+        file: "content/projects/_index.md"
+        format: toml-frontmatter
+        fields: *page_fields
+
+      - name: first_teams_index
+        label: "FIRST teams section page"
+        file: "content/first-teams/_index.md"
+        format: toml-frontmatter
+        fields: *page_fields
+
+  - name: taxonomy_pages
+    label: "Taxonomy index pages"
+    files:
+      - name: tags_index
+        label: "Tags index"
+        file: "content/tags/_index.md"
+        format: toml-frontmatter
+        fields:
+          # title is hidden and pinned on purpose: partials/tags-list.html
+          # compares page.Title against the literal string "Tags" to choose
+          # between rendering the term cloud and the term's page list.
+          # Exposing this field would let an editor silently break the page.
+          # (No label: Sveltia's hidden widget rejects one.)
+          - { name: title, widget: hidden, default: "Tags" }
+          - {
+              label: Date,
+              name: date,
+              widget: datetime,
+              date_format: "YYYY-MM-DD",
+              time_format: false,
+            }
+          - { label: Description, name: description, widget: text }
+          - { label: Draft, name: draft, widget: boolean, default: false }
+          - { label: Body, name: body, widget: markdown, modes: ["raw"] }
+
+      - name: categories_index
+        label: "Categories index"
+        file: "content/categories/_index.md"
+        format: toml-frontmatter
+        fields:
+          - { name: title, widget: hidden, default: "Categories" }
+          - {
+              label: Date,
+              name: date,
+              widget: datetime,
+              date_format: "YYYY-MM-DD",
+              time_format: false,
+            }
+          - { label: Description, name: description, widget: text }
+          - { label: Draft, name: draft, widget: boolean, default: false }
+          - { label: Body, name: body, widget: markdown, modes: ["raw"] }
