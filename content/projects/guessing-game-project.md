@@ -117,7 +117,8 @@ aio.run(main())
                  border-radius:.5rem; }
 .pyterm { background:#111; color:#eee; font-family:monospace; padding:1.5rem;
           border-radius:.5rem; min-height:12rem; white-space:pre-wrap; }
-.pyterm form { display:flex; margin-top:1.25rem; }
+.pyterm form { display:flex; flex-wrap:wrap; align-items:baseline; row-gap:1.25rem;
+               margin-top:1.25rem; }
 .pyterm input { background:transparent; border:none; color:inherit; font:inherit;
-                flex:1; padding:0; }
+                flex:1; min-width:8rem; padding:0; }
 </style>
