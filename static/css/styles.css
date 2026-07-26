@@ -373,6 +373,7 @@ input:focus-visible {
   .list-nav {
     list-style: none;
     display: flex;
+    justify-content: flex-end;
     column-gap: .3rem;
   }
 
