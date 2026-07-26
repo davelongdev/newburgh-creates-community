@@ -1,4 +1,4 @@
-+++ 
++++
 title = 'first tech challenge team'
 date = 2025-09-17T14:09:23-04:00
 description = 'information for the newburgh creates first tech challenge team'

@@ -1,4 +1,4 @@
-+++ 
++++
 title = 'first lego league teams'
 date = "2025-01-01"
 description = 'information for the newburgh creates first lego league teams'
