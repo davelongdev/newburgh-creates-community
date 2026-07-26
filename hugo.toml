@@ -56,6 +56,10 @@ title = 'newburgh creates community'
 [markup.goldmark.renderer]
   unsafe = true
 
+# syntax highlighting theme for fenced code blocks
+[markup.highlight]
+  style = "catppuccin-mocha"
+
 [security]
   allowContent = ['.*']
 
