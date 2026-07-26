@@ -1,6 +1,6 @@
 +++
 title = 'newburgh creates community projects'
-date = 2025
+date = "2025-01-01"
 description = 'newburgh creates projects | art and stem projects made by newburgh creates community'
 draft = false
 +++

@@ -1,6 +1,6 @@
 +++
 title = 'first teams at newburgh creates'
-date = 2025
+date = "2025-01-01"
 description = 'first teams at newburgh creates | first lego league & first tech challenge'
 draft = false
 +++

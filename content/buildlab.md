@@ -1,6 +1,6 @@
 +++
 title = 'buildlab'
-date = 2026
+date = "2026-01-01"
 description = 'the buildlab program at newburgh creates'
 draft = false
 +++

@@ -1,6 +1,6 @@
 +++
 title = 'contact newburgh creates'
-date = 2025
+date = "2025-01-01"
 description = 'contact information for newburgh creates'
 draft = false
 +++
