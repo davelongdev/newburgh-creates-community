@@ -1,6 +1,20 @@
 
 <head>
 	<meta charset="UTF-8">
+
+	<!-- set the color theme before first paint to avoid a flash of the light theme -->
+	<script>
+		(function () {
+			var t;
+			try { t = localStorage.getItem("theme"); } catch (e) {}
+			if (!t) {
+				t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+			}
+			if (t === "dark") document.documentElement.classList.add("dark");
+			try { localStorage.setItem("theme", t); } catch (e) {}
+		})();
+	</script>
+
 	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 	<meta
 		name="description" 

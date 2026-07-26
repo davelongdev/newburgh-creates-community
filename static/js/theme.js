@@ -1,20 +1,5 @@
-const theme = (() => {
-  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-    return localStorage.getItem("theme");
-  }
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }
-  return "light";
-})();
-
-if (theme === "light") {
-  document.documentElement.classList.remove("dark");
-} else {
-  document.documentElement.classList.add("dark");
-}
-
-window.localStorage.setItem("theme", theme);
+// the theme class is set inline in head.html before first paint.
+// this file only wires up the toggle, which needs the DOM to exist.
 
 const handleToggleClick = () => {
   const element = document.documentElement;
@@ -24,8 +9,8 @@ const handleToggleClick = () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
 };
 
-if (theme === 'dark') {
-    document.querySelector('#theme-toggle input').checked = true;
+if (document.documentElement.classList.contains("dark")) {
+  document.querySelector("#theme-toggle input").checked = true;
 }
 
 document
