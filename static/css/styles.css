@@ -133,11 +133,6 @@ li {
   /* margin-bottom: 0.5rem; */
 }
 
-.nav-margins {
-  margin: 0;
-  padding: 0;
-}
-
 /* input & textarea */
 
 input {
@@ -251,6 +246,10 @@ video {
 
 .container-nav-list {
   width: 100%;
+}
+
+.container-nav-theme-switch {
+  margin-top: 1rem;
 }
 
 .list-nav {

@@ -58,3 +58,11 @@ title = 'newburgh creates community'
 
 [security]
   allowContent = ['.*']
+
+# disable browser caching for the local dev server only (no effect on the built site)
+[[server.headers]]
+  for = "/**"
+  [server.headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"
