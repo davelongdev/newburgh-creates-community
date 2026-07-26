@@ -1,8 +1,8 @@
 # the site's base url
 baseURL = 'https://newburghcreatescommunity.com'
 
-# the site's language code
-languageCode = 'en-us'
+# the site's locale (replaces the deprecated languageCode)
+locale = 'en-us'
 
 # the site's title
 title = 'newburgh creates community'
