@@ -2,8 +2,8 @@
 title = 'first robotics competition'
 date = 2026-02-03T14:09:23-04:00
 description = 'information for the newburgh creates first robotics competition team'
-tags = ['FRC', 'first', 'robotics', 'STEAM']
-categories = ['FRC']
+tags = ['frc', 'first', 'robotics', 'steam']
+categories = ['frc']
 draft = false
 +++
 

@@ -2,8 +2,8 @@
 title = 'first lego league teams'
 date = "2025-01-01"
 description = 'information for the newburgh creates first lego league teams'
-tags = ['lego', 'FLL', 'first', 'robotics']
-categories = ['FLL', 'programs']
+tags = ['lego', 'fll', 'first', 'robotics']
+categories = ['fll', 'programs']
 draft = false
 +++
 

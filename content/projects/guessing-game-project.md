@@ -2,7 +2,7 @@
 title = "a python guessing game"
 date = "2025-09-17T14:09:23.000-04:00"
 description = "a guessing game made with python by a student"
-tags = [ "coding", "python", "STEM" ]
+tags = [ "coding", "python", "stem" ]
 categories = [ "python", "coding" ]
 draft = false
 +++

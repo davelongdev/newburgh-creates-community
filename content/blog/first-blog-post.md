@@ -1,9 +1,9 @@
 +++
-title = 'first blog post!'
-date = 2025-09-17T14:09:23-04:00
-description = 'initial blog post of the newburgh creates community blog'
-tags = ['robotics', 'coding', 'STEAM', 'programming', 'art']
-categories = ['programs', 'classes', 'meetups']
+title = "first blog post!"
+date = "2025-09-17T14:09:23.000-04:00"
+description = "initial blog post of the newburgh creates community blog"
+tags = [ "robotics", "coding", "steam", "programming", "art", "lego" ]
+categories = [ "programs", "classes", "meetups" ]
 draft = false
 +++
 
