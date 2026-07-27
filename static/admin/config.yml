@@ -5,10 +5,10 @@
 # CLAUDE.md "CMS (Sveltia)" section for the auth setup and the reasons this
 # file lives under static/. Deliberate differences from the reference:
 #
-#   - tags/categories are `list` (free text) widgets, not `relation`: the
-#     terms actually used in content here have no content-backed term pages,
-#     so a relation picker would offer nothing (or only the tag-1/tag-2
-#     scaffolding). Swap to relation widgets if/when real term pages exist.
+#   - tags/categories are `relation` widgets fed by the Tags/Categories
+#     collections (real term pages exist for every term since 2026-07-26,
+#     lowercase slugs). They started as `list` (free text) widgets while the
+#     only term pages were the tag-1/tag-2 scaffolding.
 #   - every body widget is pinned to raw editing (modes: ["raw"]): 11 of the
 #     18 content files embed raw HTML (<br>, <div>, inline <script>/<style>),
 #     and a rich-text editor can normalise or mangle that on save. Check the
@@ -40,10 +40,12 @@ collections:
     slug: "{{slug}}" # title "My Post" -> content/blog/my-post.md
     extension: md
     format: toml-frontmatter
-    # These same seven fields are repeated literally in projects and
-    # first_teams below — deliberately not shared via a YAML anchor across
-    # collections; collections referencing an alias defined in another
-    # collection showed up empty in Sveltia.
+    # These same fields are repeated literally in projects and first_teams
+    # below rather than shared via a cross-collection YAML anchor. (An anchor
+    # was once suspected of emptying collections; the real cause was granting
+    # the wrong local folder — but the cross-collection pattern remains
+    # unverified in Sveltia, so the duplication stays. Anchors *within* one
+    # collection, as in pages below, are verified fine.)
     fields:
       - { label: Title, name: title, widget: string }
       - {
@@ -54,8 +56,31 @@ collections:
           time_format: false,
         }
       - { label: Description, name: description, widget: text }
-      - { label: Tags, name: tags, widget: list, required: false }
-      - { label: Categories, name: categories, widget: list, required: false }
+      # Relation widgets read the taxonomy collections below, so the picker
+      # offers real terms and writes their slugs. New terms are created via
+      # the Tags/Categories collections first, then picked here.
+      - {
+          label: Tags,
+          name: tags,
+          widget: relation,
+          collection: tags,
+          value_field: "{{slug}}",
+          search_fields: [title],
+          display_fields: [title],
+          multiple: true,
+          required: false,
+        }
+      - {
+          label: Categories,
+          name: categories,
+          widget: relation,
+          collection: categories,
+          value_field: "{{slug}}",
+          search_fields: [title],
+          display_fields: [title],
+          multiple: true,
+          required: false,
+        }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: markdown, modes: ["raw"] }
 
@@ -77,8 +102,31 @@ collections:
           time_format: false,
         }
       - { label: Description, name: description, widget: text }
-      - { label: Tags, name: tags, widget: list, required: false }
-      - { label: Categories, name: categories, widget: list, required: false }
+      # Relation widgets read the taxonomy collections below, so the picker
+      # offers real terms and writes their slugs. New terms are created via
+      # the Tags/Categories collections first, then picked here.
+      - {
+          label: Tags,
+          name: tags,
+          widget: relation,
+          collection: tags,
+          value_field: "{{slug}}",
+          search_fields: [title],
+          display_fields: [title],
+          multiple: true,
+          required: false,
+        }
+      - {
+          label: Categories,
+          name: categories,
+          widget: relation,
+          collection: categories,
+          value_field: "{{slug}}",
+          search_fields: [title],
+          display_fields: [title],
+          multiple: true,
+          required: false,
+        }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: markdown, modes: ["raw"] }
 
@@ -100,10 +148,78 @@ collections:
           time_format: false,
         }
       - { label: Description, name: description, widget: text }
-      - { label: Tags, name: tags, widget: list, required: false }
-      - { label: Categories, name: categories, widget: list, required: false }
+      # Relation widgets read the taxonomy collections below, so the picker
+      # offers real terms and writes their slugs. New terms are created via
+      # the Tags/Categories collections first, then picked here.
+      - {
+          label: Tags,
+          name: tags,
+          widget: relation,
+          collection: tags,
+          value_field: "{{slug}}",
+          search_fields: [title],
+          display_fields: [title],
+          multiple: true,
+          required: false,
+        }
+      - {
+          label: Categories,
+          name: categories,
+          widget: relation,
+          collection: categories,
+          value_field: "{{slug}}",
+          search_fields: [title],
+          display_fields: [title],
+          multiple: true,
+          required: false,
+        }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: markdown, modes: ["raw"] }
+
+  # Taxonomy terms are real content (branch bundles), which is what lets them
+  # carry a title and description and feed the relation widgets above.
+  # path: writes content/tags/<slug>/_index.md
+  - name: tags
+    label: "Tags"
+    label_singular: "Tag"
+    folder: "content/tags"
+    path: "{{slug}}/_index"
+    create: true
+    extension: md
+    format: toml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      # date and draft exist in the term files and must be declared — a
+      # collection silently drops undeclared front-matter keys on save.
+      - {
+          label: Date,
+          name: date,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: Description, name: description, widget: text }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+
+  - name: categories
+    label: "Categories"
+    label_singular: "Category"
+    folder: "content/categories"
+    path: "{{slug}}/_index"
+    create: true
+    extension: md
+    format: toml-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: Date,
+          name: date,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: Description, name: description, widget: text }
+      - { label: Draft, name: draft, widget: boolean, default: false }
 
   - name: pages
     label: "Pages"
