@@ -38,7 +38,7 @@
         <a 
           href="/categories/{{ $name | urlize }}" 
           class='btn taxonomy-items'
-        >{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
+        >{{ $taxonomy.Page.Title }} ({{ $taxonomy.Count }})</a>
 
     {{end}}
   
