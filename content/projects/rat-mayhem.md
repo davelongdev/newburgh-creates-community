@@ -16,19 +16,26 @@ Use the on-screen controls (or the arrow keys and space bar on a computer) to pl
 
 <br>
 
-<div class="arcade-embed">
-  <iframe
-    src="https://arcade.makecode.com/---run?id=S67837-72928-76034-67859"
-    allowfullscreen
-    sandbox="allow-popups allow-forms allow-scripts allow-same-origin"
-    frameborder="0"></iframe>
+<div class="arcade-wrap">
+  <div class="arcade-embed">
+    <iframe
+      src="https://arcade.makecode.com/---run?id=S67837-72928-76034-67859"
+      allowfullscreen
+      sandbox="allow-popups allow-forms allow-scripts allow-same-origin"
+      frameborder="0"></iframe>
+  </div>
 </div>
+
+<br>
 
 Want to see how it works? You can <a class="remix-link" href="https://arcade.makecode.com/S67837-72928-76034-67859">view and remix the code</a> in the MakeCode editor.
 
+<br>
+
 <style>
-.arcade-embed { position:relative; height:0; padding-bottom:98%; overflow:hidden;
-                margin-top:1.25rem; margin-bottom:1.25rem; border-radius:.5rem; }
+.arcade-wrap { max-width:30rem; margin:1.25rem auto; }
+.arcade-embed { position:relative; height:0; padding-bottom:125%; overflow:hidden;
+                border-radius:.5rem; }
 .arcade-embed iframe { position:absolute; top:0; left:0; width:100%; height:100%;
                        border:0; }
 a.remix-link, .dark a.remix-link { color:#d97757; }
