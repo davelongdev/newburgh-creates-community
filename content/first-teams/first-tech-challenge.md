@@ -86,6 +86,8 @@ the name of the team is:
   - make nice omni wheels
   - https://www.rotacaster.com.au/
 
+- **Servo City**
+  - https://www.servocity.com/
 <br>
 
 ### rev info
