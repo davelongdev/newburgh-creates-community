@@ -594,3 +594,45 @@ button:focus-visible,
   body { padding: 25px 20px;
   overflow-wrap: break-word}
 }
+
+/* circuit field (2026-09-15, from mockup v10 in ~/web-dev/nc-community-mockups)
+   One trace pattern, inlined by layouts/partials/circuit-field.html, fixed behind the
+   whole page in the font colour of each mode. The colour is solid and the layer is faded
+   with opacity, so filled pads read as one disc and hollow pads as a clean ring. The
+   masks keep it quiet under the text column and quieter across the header rows. */
+
+:root {
+  --trace: var(--color-text-light);
+  --pad-hollow: var(--color-background-light);
+}
+html.dark {
+  --trace: var(--color-text-dark);
+  --pad-hollow: var(--color-darkmode-bkgd-base);
+}
+
+header, main, footer { position: relative; z-index: 1; }
+
+.board-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--trace);
+  opacity: 0.3;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0, rgba(0,0,0,0.3) 230px, #000 340px);
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0, rgba(0,0,0,0.3) 230px, #000 340px);
+}
+.board-bg svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+  border-radius: 0;
+  -webkit-mask-image: linear-gradient(90deg, #000 0, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.14) 24%, rgba(0,0,0,0.14) 76%, rgba(0,0,0,0.6) 90%, #000 100%);
+  mask-image: linear-gradient(90deg, #000 0, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.14) 24%, rgba(0,0,0,0.14) 76%, rgba(0,0,0,0.6) 90%, #000 100%);
+}
+.board-bg .trace,
+.board-bg .pad { stroke: currentColor; }
+.board-bg .pad--hollow { fill: var(--pad-hollow); }
