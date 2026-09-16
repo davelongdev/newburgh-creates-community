@@ -535,7 +535,7 @@ button:focus-visible,
 /* footer */
 
 .footer-container {
-  font-size: 1rem;
+  font-size: 1.05rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -543,7 +543,7 @@ button:focus-visible,
 
 .footer-address {
   font-style: normal;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -554,12 +554,6 @@ button:focus-visible,
 .footer-business {
   font-size: 1.15rem;
   margin-bottom: .15rem;
-}
-
-.footer-copyright {
-  max-width: fit-content;
-  margin: auto;
-  margin-bottom: 0;
 }
 
 #mail {
@@ -657,7 +651,8 @@ header, main, footer { position: relative; z-index: 1; }
 }
 
 @media screen and (min-width: 800px) {
-  .footer-container { align-items: center; }
-  .paint-footer { margin: 0 1.5rem 0 0; }
+  .footer-container { align-items: flex-start; }   /* links on the right line up with the top of the address */
+  .paint-footer { margin: 0 1.5rem 0 0; align-self: center; }
   .footer-address { margin-right: auto; }   /* keeps the address beside the swatch, on the left */
+  .footer-container-rt { margin-top: .8rem; }   /* link text sits on the same line as the business name */
 }
