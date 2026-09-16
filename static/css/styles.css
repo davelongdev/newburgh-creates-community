@@ -636,3 +636,28 @@ header, main, footer { position: relative; z-index: 1; }
 .board-bg .trace,
 .board-bg .pad { stroke: currentColor; }
 .board-bg .pad--hollow { fill: var(--pad-hollow); }
+
+/* footer paint swatch (2026-09-15, from mockup v14 in ~/web-dev/nc-community-mockups)
+   Three paint strokes inlined by layouts/partials/paint-swatch.html, to the left of the
+   address on wide screens and centred above it on narrow ones. Colours are baked into
+   the SVG; the 80% opacity softens them toward the page in both modes. */
+
+.paint-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.paint-footer svg {
+  width: 180px;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 800px) {
+  .footer-container { align-items: center; }
+  .paint-footer { margin: 0 1.5rem 0 0; }
+  .footer-address { margin-right: auto; }   /* keeps the address beside the swatch, on the left */
+}
